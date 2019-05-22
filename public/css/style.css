@@ -1,0 +1,1463 @@
+/*////////// GENERAL  ////////////*/
+/* developed in landscape smartphone first*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: 1rem;
+    margin: 2vw 2vw 0 2vw;
+    font-family: 'Francois One', sans-serif;
+    color: white;
+    background-color: #2f0e91;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+#home-register {
+    font-family: 'Francois One', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ol {
+    list-style: none;
+}
+
+section {
+    margin: 4vw 0;
+}
+
+h2, h1 {
+    padding: 15px;
+    background-color: #7158e2;
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+header h1 { /*logo home page*/
+    padding: 0;
+    background-color: transparent;
+}
+
+h3 {
+    font-size: 1.2rem;
+    padding: 15px;
+    background-color: #17c0eb;
+}
+
+h4 {
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: #67e6dc;
+}
+
+fieldset { /* delete the browser design */
+    margin: 0;
+    border-width: 0;
+    border-style: none;
+    border-color: white;
+    border-image: none;
+}
+
+textarea { /* delete the browser design */
+    border-color: white;
+    border-width: 0;
+    border-style: none;
+    border-image: none;
+
+    /* custom */
+    color: black;
+    padding: 5px;
+    font-size: 0.7rem;
+}
+
+input { /* delete the browser design */
+    border: none;
+    padding: 4px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.btn {
+    background-color: #3ae374;
+    border: 3px solid #3ae374;
+    color: white;
+    font-size: 1.1rem;
+    height: 70px;
+    width: 70px;
+    line-height: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.btnDelete {
+    background-color: #ff3838;
+    border: 3px solid #ff3838;
+    line-height: 0;
+    order: 3;
+}
+
+.btnRead, .btnUpdate {
+    background-color: #ff9f1a;
+    border: 3px solid #ff9f1a;
+
+}
+
+.btnPreviousNext {
+    background-color: #4b4b4b;
+    border: 3px solid #4b4b4b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnAction {
+    display: flex;
+    margin: 4vh 0;
+    justify-content: space-between;
+}
+
+#next {
+    order: 4;
+}
+
+#previous {
+    order: 1;
+}
+
+.btnRead {
+    order: 2;
+}
+
+.btnUpdate {
+    order: 2;
+}
+
+.btnUpdate, .btnDelete, .btnRead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnSearch {
+    background-color: #7158e2;
+    border: 3px solid #7158e2;
+}
+
+.btn-register {
+    background-color: #ffb8b8;
+    border: 3px solid #ffb8b8;
+}
+
+.icon-calendar::before, .icon-clock2::before {
+    position: relative;
+    font-size: 1.7rem;
+    top: 9px;
+    right: 5px;
+}
+
+#moreElements {
+    display: flex;
+    margin-top: 2vw;
+    width: 100%;
+}
+
+#elaborationTxt, #previousEventsTxt {
+    display: inline-block;
+    width: 50%;
+    margin-top: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}
+
+#elaboration textarea, #previousEvents textarea {
+    display: none;
+    width: 96vw;
+    height: 200px;
+}
+
+#elaborationTxt {
+    background-color: #c56cf0;
+}
+
+#previousEventsTxt {
+    background-color: #ffaf40;
+    margin-left: 2%;
+}
+
+#submitDream {
+    margin-top: 3vw;
+}
+
+.notification {
+    position: absolute;
+    padding: 15px;
+    margin: 1vw;
+    background-color: #3ae374;
+    z-index: 2;
+}
+
+.notifError {
+    background-color: #ff4d4d;
+}
+
+
+/*//////////  HEADER  ////////////*/
+header {
+    height: 90px;
+    width: 100%;
+}
+
+#home-login, #home-createAccount {
+    margin-top: 90px;
+}
+
+#logo-img {
+    height: 90px;
+    width: 180px;
+}
+
+header .fa {
+    font-size: 1.7rem;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+nav {
+    display: flex;
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav button, nav a {
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
+}
+
+#home-createAccount {
+    display: none;
+}
+
+#nav-register {
+    background-color: #ffb8b8;
+    border: 3px solid #ffb8b8;
+}
+
+#nav-btn-box {
+    display: flex; /*else space between btn*/
+}
+
+#nav-btn-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-lock {
+    margin-left: 14px;
+}
+
+#nav-home {
+    border: 3px solid #ff9f1a;
+    background-color: #ff9f1a;
+}
+
+#nav-book {
+    border: 3px solid #c56cf0;
+    background-color: #c56cf0;
+}
+
+#nav-profil {
+    border: 3px solid #17c0eb;
+    background-color: #17c0eb;
+}
+
+#nav-logout, #nav-login {
+    border: 3px solid #3d3d3d;
+    background-color: #3d3d3d;
+}
+
+#dateTime {
+    margin-top: 2vw;
+    width: 100%;
+}
+
+#dateTime label {
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    padding: 0 5px;
+}
+
+#dateTime-dreamDate {
+    background-color: #17c0eb;
+    width: 53%;
+    margin-right: 1%;
+}
+
+#dateTime-dreamHour {
+    background-color: #ffb8b8;
+    width: 45%;
+}
+
+
+/*////////////  HOME  ///////////*/
+#home-login, #home-createAccount {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+#home-createAccount {
+    z-index: 2;
+}
+
+#home-login {
+    z-index: 1;
+}
+
+#forgetPassBox {
+    display: none;
+}
+
+#home-login-form {
+    padding: 15px;
+    background-color: #ffaf40;
+}
+
+.g-recaptcha {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#home-login-forgetPass-form {
+    padding: 15px;
+    background-color: #17c0eb;
+}
+
+#home-login-form label, #home-login-form button, #home-login-forgetPass-form label, #home-createAccount label {
+    margin-bottom: 1vw;
+    align-self: center;
+}
+
+#home-login-form button, #home-login-forgetPass-form button, #home-createAccount button {
+    margin-top: 2vw;
+    align-self: center;
+}
+
+#home-login-form-password {
+    display: flex;
+}
+
+#home-login-forgetPass-btn, #home-createAccount button {
+    margin: 2vw 0;
+}
+
+#home-login-form, #home-login-forgetPass-form, #home-createAccount form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#home-createAccount form {
+    background-color: #ffaf40;
+    padding: 15px;
+}
+
+#home-createAccount h2 {
+    text-align: center;
+}
+
+#home-login-forgetPass {
+    cursor: pointer;
+    opacity: 0.7;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+#home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#home > div {
+    margin-bottom: 4vw;
+    width: 100%;
+}
+
+.opacity {
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+
+#home h2 {
+    display: inline-block;
+}
+
+#home .box {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#home .txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 65%;
+    padding: 15px 50px;
+}
+
+#home-homeLogged-box {
+    background-color: #17c0eb;
+}
+
+#slogan em {
+    color: #fff200;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+#home-homeLogged-txt {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    align-content: space-around;
+    justify-content: center;
+}
+
+#slogan {
+    text-align: center;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+}
+
+#home-register {
+    width: auto;
+    padding: 15px;
+    font-size: 1.6rem;
+    margin-top: 2vw;
+}
+
+#home-homeLogged-right {
+    display: none; /* bug on firefox os browser*/
+    color: #fff200;
+}
+
+#home-homeLogged-register {
+    padding: 15px;
+    text-align: center;
+    margin-right: 0;
+}
+
+#home-index .box {
+    background-color: #ffb8b8;
+}
+
+#home-search .box {
+    background-color: #ffaf40;
+}
+
+.txt p {
+    text-align: center;
+    font-size: 1.4rem;
+    word-wrap: break-word;
+}
+
+#home-question .box {
+    flex-direction: column;
+    background-color: #c56cf0;
+    font-size: 0.7rem;
+    justify-content: center;
+}
+
+#home-question .question {
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+#home-question p {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    text-align: justify;
+    max-width: 100%; /* bug ie */
+}
+
+#home img {
+    width: 300px;
+    height: 300px;
+}
+/*/////////// LEGAL NOTICE  //////////*/
+#legalNotice h1 {
+    display: inline-block;
+    margin-bottom: 2%;
+}
+
+
+/*/////////// FOOTER  //////////*/
+footer {
+    background-color: #7158e2;
+    padding: 15px;
+    padding-right: 2vw;
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    margin-left: -2vw;
+}
+
+
+/*////////////  HOMELOGGED  ///////////*/
+#dream {
+    background-color: #7158e2;
+    color: white;
+    padding: 15px;
+}
+
+#dreamForm h1 {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+#dreamWrite {
+    width: 100%;
+    height: 200px;
+}
+
+#dreamWrite::placeholder {
+    font-size: 1rem;
+}
+
+#dreamForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#dreamForm .btn {
+    align-self: center;
+}
+
+
+/*///////////  INDEXDREAMS  ///////////*/
+#indexDreams h1 {
+    width: 33%;
+    text-align: center;
+    margin: 0 33% 4vw 33%;
+}
+
+#indexDreams-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+#indexDreams-list li {
+    display: flex;
+}
+
+#indexDreams-list a {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+#indexDreams-list h2, #indexDreams-list h3, #indexDreams-list p {
+    margin: auto;
+}
+
+#indexDreams-list h2, #indexDreams-list h3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.indexDreams-3title {
+    background-color: #7158e2;
+}
+
+.indexDreams-4title {
+    background-color: #17c0eb;
+}
+
+#indexDreams-list p {
+    text-align: center;
+}
+
+/*  for index dreams and results search */
+#indexDreams-list li[class$='0'], #indexDreams-list li[class$='6'], #resultsSearch li[id$='0'], #resultsSearch li[id$='6'] {
+    background-color: #ff4d4d;
+}
+
+#indexDreams-list li[class$='1'], #indexDreams-list li[class$='7'], #resultsSearch li[id$='1'], #resultsSearch li[id$='7'] {
+    background-color: #ffaf40;
+}
+
+#indexDreams-list li[class$='2'], #indexDreams-list li[class$='8'], #resultsSearch li[id$='2'], #resultsSearch li[id$='8'] {
+    background-color: #c56cf0;
+}
+
+#indexDreams-list li[class$='3'], #indexDreams-list li[class$='9'], #resultsSearch li[id$='3'], #resultsSearch li[id$='9'] {
+    background-color: #4b4b4b;
+}
+
+#indexDreams-list li[class$='4'], #resultsSearch li[id$='4'] {
+    background-color: #ffb8b8;
+}
+
+#indexDreams-list li[class$='5'], #resultsSearch li[id$='5'] {
+    background-color: #3ae374;
+}
+
+
+/*////////////  PROFIL  ////////////*/
+#updateAccount h1 {
+    display: flex;
+    width: 33%;
+    margin-left: 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+#updateAccount form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4vw 0;
+}
+
+#updateAccount h2 {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#updateAccount label {
+    width: 55%;
+    padding: 2%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffaf40;
+}
+
+#updateAccount input {
+    margin-left: 2%;
+}
+
+#updateAccount label:nth-child(3n) {
+    margin-left: 33%;
+    border-top: 2px solid #ff9f1a;
+}
+
+#updateAccount .btn {
+    align-self: flex-end;
+    margin: auto;
+}
+
+
+/*////////////  UPDATEDREAM  ////////////*/
+#updateDream-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#updateDream-title h2 {
+    background-color: #17c0eb;
+}
+
+#updateDream-updated {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#dreamUpdated {
+    width: 100%;
+    height: 250px;
+}
+
+#updateDream-dream {
+    width: 100%;
+}
+
+
+/*////////////  READDREAM  /////////////*/
+#readDream-date {
+    font-size: 1.2rem;
+    padding: 15px;
+    background-color: #17c0eb;
+}
+
+#readTitlteBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+#readTitlteBox h2, #readTitlteBox p, .read-aside h2 {
+    text-align: center;
+    display: inline-block;
+}
+
+#readDream-dream {
+    padding: 15px;
+    background-color: #7158e2;
+}
+
+#readDream p:not(#readDream-date) {
+    display: block; /*for the same font-size*/
+    font-size: 1rem;
+    height: auto;
+    width: 100%;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    text-align: justify;
+}
+
+.read-aside {
+    margin-top: 4vh;
+}
+
+#read-aside-elaboration, #readDreamElaboration div {
+    background-color: #c56cf0;
+}
+
+#read-aside-elaboration, #read-aside-events {
+    align-self: flex-start;
+}
+
+#readDreamElaboration div {
+    padding: 15px;
+}
+
+#read-aside-events, #readDreamPreviousEvents div {
+    background-color: #ffaf40;
+    padding: 15px;
+}
+
+
+/*/////////////  SEARCH  //////////*/
+#searchForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#search {
+    margin: -3vw 0 3vw 0;
+}
+
+#searchForm input {
+    margin-left: 15px;
+}
+
+#searchForm label {
+    padding: 2vw;
+    background-color: #4b4b4b;
+    margin-right: 30px;
+}
+
+#arrowLeftSearch, #arrowRightSearch {
+    display: none;
+    opacity: 0.5;
+}
+
+#partResultsSearch {
+    margin-top: 2%;
+}
+
+#titleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#resultsSearch {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#resultsSearch li {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#resultsSearch a {
+    padding: 15px;
+}
+
+#boxArrowSearch {
+    margin: 3vw 0;
+    display: flex;
+    justify-content: center;
+}
+
+#boxArrowSearch .btnPreviousNext {
+    margin: 0 1% 0 1%;
+}
+
+
+/*////////////  RESPONSIVE  /////////////*/
+@media all and (min-device-width: 568px) and (orientation: landscape) {
+    #home-question .box {
+        font-size: 0.9rem;
+    }
+}
+
+@media all and (min-device-width: 800px) and (orientation: landscape) {
+    #dreamWrite::placeholder {
+        font-size: 0.8rem;
+    }
+
+    textarea {
+        font-size: 0.8rem;
+    }
+
+    #home-question .box {
+        font-size: 1rem;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    html {
+        font-size: 17px;
+    }
+
+    #dreamWrite::placeholder {
+        font-size: 0.5rem;
+    }
+
+    .btn:hover {
+        background-color: white;
+    }
+
+    .btn:hover #home-homeLogged-register, .btn-register:hover {
+        color: #ffb8b8;
+    }
+
+    .btn:hover .icon-checkmark::before {
+        color: #3ae374;
+    }
+
+    .btn:hover .icon-bin2::before {
+        color: #ff3838;
+    }
+
+    .btn:hover .icon-wrench::before, .btn:hover .icon-file-empty::before {
+        color: #ff9f1a;
+    }
+
+    .btn:hover .icon-arrow-left::before, .btn:hover .icon-arrow-right::before {
+        color: #4b4b4b;
+    }
+
+    .btnSearch:hover .icon-search::before {
+        color: #7158e2;
+    }
+
+    /*use in event js search when the btn is not clickable*/
+    .icon-arrow-left-opacity::before {
+        content: "\ea38";
+    }
+
+    .icon-arrow-right-opacity::before {
+        content: "\ea34";
+    }
+
+    .btn:hover .icon-arrow-left-opacity::before, .btn:hover .icon-arrow-right-opacity::before {
+        color: white;
+    }
+
+    #nav-home:hover, #nav-book:hover, #nav-profil:hover, #nav-logout:hover, #nav-login:hover, #nav-register:hover {
+        background-color: white;
+    }
+
+    #nav-home:hover .icon-home3::before {
+        color: #ff9f1a;
+    }
+
+    #nav-book:hover .icon-book::before {
+        color: #c56cf0;
+    }
+
+    #nav-profil:hover .icon-user::before {
+        color: #17c0eb;
+    }
+
+    #nav-logout:hover .icon-lock::before, #nav-login:hover .icon-key::before {
+        color: #3d3d3d;
+    }
+
+    #indexDreams-list li:hover, #resultsSearch li:hover, #indexDreamsTitle:hover {
+        background-color: #efdf02;
+        cursor: pointer;
+    }
+
+    #indexDreams-list h2:hover, #indexDreams-list h3:hover {
+        background-color: #efdf02;
+        cursor: pointer;
+    }
+
+    #nav-register:hover .fa {
+        color: #ffb8b8;
+    }
+
+
+    /*>>>>>>>>>>  HOME <<<<<<<<<<<*/
+    #slogan {
+        font-size: 1.2rem;
+    }
+
+    #home-register {
+        font-size: 1.3rem;
+        margin-right: 15px;
+    }
+
+    #home .txt {
+        padding: 0 15px 0 0;
+    }
+
+    .txt p {
+        font-size: 1.1rem;
+    }
+
+    #home-question .box {
+        font-size: 1rem;
+    }
+
+    #home img {
+        width: 225px;
+        height: 225px;
+    }
+}
+
+@media all and (orientation: landscape) and (min-width: 1024px) {
+    header {
+        height: 90px;
+        margin-bottom: 2%;
+    }
+
+    #home-login, #home-createAccount {
+        margin-top: 90px;
+    }
+
+    textarea {
+        padding: 10px;
+    }
+
+    input {
+        font-size: 0.8rem;
+        padding: 7px;
+    }
+
+    #logo-img {
+        height: 90px;
+        width: 145px;
+    }
+
+    nav a {
+        height: 90px;
+        width: 90px;
+    }
+
+    #dreamForm {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #dreamWrite::placeholder {
+        font-size: 0.9rem;
+    }
+
+    #dream {
+        padding: 2vw 2vw 2vw 0;
+        width: 80%;
+    }
+
+    #dreamForm h1 {
+        padding-top: 2vw;
+        line-height: 200px;
+        width: 20%;
+    }
+
+    #dateTime {
+        text-align: center;
+    }
+
+    #dateTime-dreamDate {
+        width: 270px;
+        margin-right: 2%;
+    }
+
+    #dateTime-dreamHour {
+        width: 270px; /*if smaller bug ie*/
+    }
+
+    #dateTime label, #elaborationTxt, #previousEventsTxt {
+        height: 90px;
+        line-height: 90px;
+    }
+
+    #elaboration textarea, #previousEvents textarea {
+        display: block;
+        width: 100%;
+    }
+
+    #elaboration {
+        width: 49%;
+        margin-right: 2%;
+        padding: 0 2vw 2vw 2vw;
+        background-color: #c56cf0;
+    }
+
+    #previousEvents {
+        width: 49%;
+        padding: 0 2vw 2vw 2vw;
+        background-color: #ffaf40;
+    }
+
+    #elaborationTxt, #previousEventsTxt {
+        pointer-events: none;
+    }
+
+    #updateDream-dream {
+        padding: 2vw;
+        background-color: #7158e2;
+    }
+
+    #dreamUpdated {
+        height: 200px;
+    }
+
+    .ru-dream {
+        width: 100%;
+    }
+
+    #searchForm label {
+        max-height: 90px;
+        padding: 1vw;
+    }
+
+    /*>>>>>>>>>>>  HOME <<<<<<<<<<<*/
+    #home-login-form, #home-login-forgetPass-form, #home-createAccount form {
+        width: auto;
+    }
+
+    #home {
+        justify-content: center;
+    }
+
+    #home div {
+        width: 49%;
+        height: auto;
+    }
+
+    #home .box {
+        width: 100%;
+    }
+
+    #home div:nth-last-child(1) {
+        width: 100%;
+    }
+
+    #home-homeLogged {
+        margin-right: 2%;
+    }
+
+    #home-homeLogged-right {
+        font-size: 1.9rem;
+    }
+
+    #home-homeLogged-register {
+        padding: 0;
+    }
+
+    #updateAccount h1 {
+        width: 200px;
+        margin: auto auto 4vw auto;
+    }
+}
+
+@media all and (min-width: 1280px) {
+    #home img {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media all and (orientation: landscape) and (min-width: 1280px) {
+    #dreamWrite {
+        height: 250px;
+    }
+
+    #dreamForm h1 {
+        padding-top: 2vw;
+        line-height: 250px;
+    }
+
+    #resultsSearch li {
+        width: 33.33%;
+    }
+
+    #updateDream textarea {
+        font-size: 0.8rem;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    body {
+        margin: 4vw 10vw 0 10vw;
+    }
+
+    footer {
+        margin-left: -10vw;
+    }
+}
+
+@media all and (orientation: landscape) and (min-width: 1440px) {
+    #home-homeLogged, #home-search {
+        margin-right: 2%;
+    }
+
+    #home {
+        justify-content: space-around;
+    }
+
+    #home > div {
+        max-width: 620px;
+        margin: 2vw auto;
+    }
+
+    #home div:nth-last-child(1) {
+        max-width: 1240px;
+    }
+
+    #updateAccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #updateAccount form {
+        margin: 1vw 0;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    #updateAccount h2 {
+        width: 270px;
+        height: 90px;
+        text-align: center;
+    }
+
+    #updateAccount label {
+        width: auto;
+        flex-grow: 1;
+        margin-right: 0;
+        height: 90px;
+        padding: 0;
+    }
+
+    #updateAccount label:nth-child(3n) {
+        margin-left: 0;
+        border-top: none;
+        margin-right: 2%;
+    }
+
+    #updateAccount #deleteAccountLabel {
+        margin-right: 2%;
+    }
+
+    #updateAccount .btn {
+        align-self: center;
+    }
+
+    #indexDreams h1 {
+        width: 300px;
+        margin: auto auto 4vw auto;
+        align-self: center;
+    }
+}
+
+/*////////////////////////  PORTRAIT  //////////////////////*/
+@media all and (orientation: portrait) {
+    html {
+        font-size: 30px;
+    }
+
+    body {
+        margin-top: 4vh;
+    }
+
+    textarea {
+        font-size: 0.4rem;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        height: 90px;
+        width: 90px;
+    }
+
+    /*>>>>>>>>>>>  NAV  <<<<<<<<<<<<*/
+    header {
+        height: 120px;
+    }
+
+    #home-login, #home-createAccount {
+        margin-top: 120px;
+    }
+
+    #logo-img {
+        height: 120px;
+        width: auto;
+    }
+
+    nav button, #nav-btn-box a {
+        height: 120px;
+        width: 120px;
+    }
+
+    /*>>>>>>>>>>>  HOME  <<<<<<<<<<<<*/
+    .g-recaptcha {
+        margin: 2vh 0;
+        font-size: 1.1rem;
+    }
+
+    #home-createAccount label, #home-login label {
+        font-size: 1.2rem;
+    }
+
+    #home-login .opacity, #home-createAccount .opacity, #home-login-forgetPass {
+        font-size: 1.1rem;
+    }
+
+    #slogan {
+        font-size: 1.4rem;
+    }
+
+    #home-register {
+        font-size: 1.5rem;
+    }
+
+    #home-question .box {
+        font-size: 0.5rem;
+    }
+
+    /*>>>>>>>>>>>  HOMELOGGED <<<<<<<<<<<<*/
+    #dreamWrite {
+        height: 250px;
+    }
+
+    #dreamWrite::placeholder {
+        font-size: 1rem;
+    }
+
+    #submitDream {
+        margin-top: 5vh;
+    }
+
+    #elaborationTxt, #previousEventsTxt {
+        height: 100px;
+        line-height: 100px;
+    }
+
+    #dateTime label {
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .icon-clock2::before, .icon-calendar::before {
+        top: 11px;
+    }
+
+    /*>>>>>>>>>>>  SEARCH  <<<<<<<<<<<<*/
+    #resultsSearch li {
+        text-align: center;
+        align-items: center;
+    }
+
+    /*>>>>>>>>>>> UPDATEACCOUNT  <<<<<<<<<<<<*/
+    #updateAccount form {
+        flex-direction: column;
+    }
+
+    #updateAccount h3 {
+        width: auto;
+        align-self: flex-start;
+    }
+
+    #updateAccount label {
+        width: auto;
+        margin-right: 0;
+    }
+
+    #updateAccount label:nth-child(3n) {
+        margin-left: 0;
+    }
+
+    #updateAccount .btn {
+        align-self: center;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+
+    /*>>>>>>>>>>> INDEXDREAMS <<<<<<<<<<<<*/
+    #indexDreams h1 {
+        width: 40%;
+        margin: 0 30% 4vw 30%;
+    }
+}
+
+@media all and (orientation: portrait) and (min-device-height: 736px) {
+    #home-login .opacity, #home-createAccount .opacity, #home-login-forgetPass {
+        font-size: 0.9rem;
+    }
+
+    #slogan {
+        font-size: 1.2rem;
+    }
+
+    .txt p {
+        font-size: 1.1rem;
+    }
+
+    #home-register, #slogan em {
+        font-size: 1.3rem;
+    }
+}
+
+@media all and (orientation: portrait) and (min-device-height: 900px) {
+    #slogan {
+        font-size: 1.1rem;
+    }
+
+    #home-register, #slogan em {
+        font-size: 1.2rem;
+    }
+
+    #home-question .box {
+        font-size: 0.8rem;
+    }
+
+    textarea {
+        font-size: 0.7rem;
+    }
+}
+
+@media all and (orientation: portrait) and (min-device-height: 1000px) {
+    body {
+        margin-top: 2vh;
+    }
+
+    .icon-clock2::before {
+        top: 12px;
+    }
+
+    textarea {
+        font-size: 0.5rem;
+    }
+}
+
+@media all and (orientation: portrait) and (min-device-height: 1024px) {
+    #home-createAccount label, #home-login label {
+        font-size: 0.8rem;
+    }
+
+    #home-login .opacity, #home-createAccount .opacity, #home-login-forgetPass {
+        font-size: 0.7rem;
+    }
+
+    #slogan {
+        font-size: 1rem;
+    }
+
+    #home-register, #slogan em {
+        font-size: 1.1rem;
+    }
+
+    .txt p {
+        font-size: 1rem;
+    }
+
+    #home-question .box {
+        font-size: 0.7rem;
+    }
+}
+
+@media all and (orientation: portrait) and (min-device-height: 1366px) {
+    #home img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .txt p {
+        margin: 50px;
+    }
+}

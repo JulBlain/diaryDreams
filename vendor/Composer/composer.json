@@ -1,0 +1,14 @@
+{
+    "name": "vendor/elastic",
+    "require": {
+        "elasticsearch/elasticsearch": "^6.0",
+        "aws/aws-sdk-php": "^3.52",
+        "wizacha/aws-signature-middleware": "^0.1.2"
+    },
+    "authors": [
+        {
+            "name": "julienblain",
+            "email": "blain.julien@gmail.com"
+        }
+    ]
+}
